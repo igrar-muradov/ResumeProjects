@@ -24,7 +24,7 @@ public class Main {
         CountryDaoInter country = Context.instanceCountryDao();
         SkillDaoInter skill = Context.instanceSkillDao();
         
-        System.out.println(skill.getAll());
+        System.out.println(userDao.getAll());
         
     }
 
