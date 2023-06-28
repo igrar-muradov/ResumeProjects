@@ -4,8 +4,11 @@
  */
 package com.company.main;
 
-import com.company.bean.User;
+import com.company.dao.inter.CountryDaoInter;
+import com.company.dao.inter.EmploymentHistoryDaoInter;
+import com.company.dao.inter.SkillDaoInter;
 import com.company.dao.inter.UserDaoInter;
+import com.company.dao.inter.UserSkillDaoInter;
 
 /**
  *
@@ -14,12 +17,15 @@ import com.company.dao.inter.UserDaoInter;
 public class Main {
 
     public static void main(String[] args) {
+        
+        UserSkillDaoInter  userSkillDao = Context.instanceUserSkillDao();
         UserDaoInter userDao = Context.instanceUserDao();
-        User u = userDao.getById(2);
-        u.setName("Eldar");
-        userDao.updateUser(u);
-        System.out.println(userDao.getById(2));
-
+        EmploymentHistoryDaoInter  emp = Context.instanceEmploymentHistoryDao();
+        CountryDaoInter country = Context.instanceCountryDao();
+        SkillDaoInter skill = Context.instanceSkillDao();
+        
+        System.out.println(skill.getAll());
+        
     }
 
 }
