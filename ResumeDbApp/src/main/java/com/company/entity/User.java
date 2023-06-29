@@ -28,6 +28,10 @@ public class User {
         this.id = id;
     }
     
+    public User(){
+        
+    }
+    
     public User(int id, String name, String surname, String phone, String email, String profileDescription, String address, Date birthDate, Country nationality, Country birthPlace) {
         this.id = id;
         this.name = name;
