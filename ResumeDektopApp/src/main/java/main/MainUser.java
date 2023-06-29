@@ -4,9 +4,12 @@
  */
 package main;
 
+import com.company.dao.inter.CountryDaoInter;
 import com.company.dao.inter.UserDaoInter;
+import com.company.entity.Country;
 import com.company.entity.User;
 import com.company.main.Context;
+import java.util.List;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,7 +20,7 @@ import java.util.Date;
  * @author Igrar
  */
 public class MainUser extends javax.swing.JFrame {
-
+    private final CountryDaoInter countryDao = Context.instanceCountryDao();
     private final UserDaoInter userDao = Context.instanceUserDao();
     User loggedInUser;
 
@@ -27,10 +30,19 @@ public class MainUser extends javax.swing.JFrame {
     public MainUser() {
         initComponents();
         loggedInUser = userDao.getById(6);
+        fillAllCountry();
         fillUserComponents();
     }
 
     private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    
+    private void fillAllCountry(){
+        List<Country> countries = countryDao.getAll();
+        for (Country country : countries) {
+            cbCountry.addItem(country);
+            cbNationality.addItem(country);
+        }
+    }
 
     private void fillUserComponents() {
         txtName.setText(loggedInUser.getName());
@@ -42,8 +54,10 @@ public class MainUser extends javax.swing.JFrame {
         Date dt = loggedInUser.getBirthDate();
         String dtStr = sdf.format(dt);
         txtBirthdate.setText(dtStr);
-
-    }
+        cbCountry.setSelectedItem(loggedInUser.getBirthPlace());
+        cbNationality.setSelectedItem(loggedInUser.getNationality());
+        
+     }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -183,9 +197,11 @@ public class MainUser extends javax.swing.JFrame {
 
         lblNationality.setText("Nationality");
 
-        cbCountry.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Azerbaijan", "USA" }));
-
-        cbNationality.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Azerbaijani", "American" }));
+        cbCountry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCountryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlDetailsLayout = new javax.swing.GroupLayout(pnlDetails);
         pnlDetails.setLayout(pnlDetailsLayout);
@@ -344,6 +360,8 @@ public class MainUser extends javax.swing.JFrame {
         String phone = txtPhone.getText();
         String email = txtEmail.getText();
         String birthDate = txtBirthdate.getText();
+        Country birthPlace = (Country) cbCountry.getSelectedItem();
+        Country nationality = (Country) cbNationality.getSelectedItem();
 
         java.util.Date dtUtil = null;
         try {
@@ -361,6 +379,8 @@ public class MainUser extends javax.swing.JFrame {
         loggedInUser.setPhone(phone);
         loggedInUser.setEmail(email);
         loggedInUser.setBirthDate(bd);
+        loggedInUser.setBirthPlace(birthPlace);
+        loggedInUser.setNationality(nationality);
 
         userDao.updateUser(loggedInUser);
 
@@ -381,6 +401,10 @@ public class MainUser extends javax.swing.JFrame {
     private void txtBirthdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtBirthdateActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtBirthdateActionPerformed
+
+    private void cbCountryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCountryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cbCountryActionPerformed
 
     /**
      * @param args the command line arguments
@@ -420,8 +444,8 @@ public class MainUser extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSave;
-    private javax.swing.JComboBox<String> cbCountry;
-    private javax.swing.JComboBox<String> cbNationality;
+    private javax.swing.JComboBox<Country> cbCountry;
+    private javax.swing.JComboBox<Country> cbNationality;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblAddress;
