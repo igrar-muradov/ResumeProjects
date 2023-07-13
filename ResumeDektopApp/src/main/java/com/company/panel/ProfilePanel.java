@@ -19,6 +19,11 @@ public class ProfilePanel extends javax.swing.JPanel {
      */
     public ProfilePanel() {
         initComponents();
+        try {
+            Class.forName("main.Config");
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
         fillUserComponents();
     }
 

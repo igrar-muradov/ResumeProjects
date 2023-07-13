@@ -8,6 +8,7 @@ import com.company.entity.User;
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.EmploymentHistoryDaoInter;
 import com.company.entity.EmploymentHistory;
+import com.company.entity.Skill;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -52,6 +53,31 @@ public class EmploymentHistoryDaoImpl extends AbstractDAO implements EmploymentH
             System.out.println(ex);
         }
         return result;
+    }
+
+    @Override
+    public EmploymentHistory getEmploymentHistoryById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public EmploymentHistory updateEmploymentHistoryById(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public EmploymentHistory addEmploymentHistory(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public boolean addEmploymentHistoryToUser(Skill s) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public boolean removeEmploymentHistoryByIdFromUser(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

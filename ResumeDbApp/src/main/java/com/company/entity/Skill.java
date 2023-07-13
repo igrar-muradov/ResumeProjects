@@ -9,14 +9,14 @@ package com.company.entity;
  * @author Igrar
  */
 public class Skill {
-    private int id;
+    private Integer id;
     private String name;
     
     public Skill(){
         
     }
 
-    public Skill(int id, String name) {
+    public Skill(Integer id, String name) {
         this.id = id;
         this.name = name;
     }

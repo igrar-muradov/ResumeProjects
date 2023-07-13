@@ -5,6 +5,7 @@
 package com.company.dao.inter;
 
 import com.company.entity.EmploymentHistory;
+import com.company.entity.Skill;
 import java.util.List;
 
 /**
@@ -14,4 +15,14 @@ import java.util.List;
 public interface EmploymentHistoryDaoInter {
 
     public List<EmploymentHistory> getAllEmploymentHistoryByUserId(int userId);
+    
+    public EmploymentHistory getEmploymentHistoryById(int id);
+    
+    public EmploymentHistory updateEmploymentHistoryById(int id);
+    
+    public EmploymentHistory addEmploymentHistory(int id);
+    
+    public boolean addEmploymentHistoryToUser(Skill s);
+    
+    public boolean removeEmploymentHistoryByIdFromUser(int id);
 }

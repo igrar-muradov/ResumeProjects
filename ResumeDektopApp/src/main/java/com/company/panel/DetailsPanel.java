@@ -28,6 +28,7 @@ public class DetailsPanel extends javax.swing.JPanel {
     private void fillUserComponents() {
         User loggedInUser = Config.loggedInUser;
         txtAddress.setText(loggedInUser.getAddress());
+        
         txtPhone.setText(loggedInUser.getPhone());
         txtEmail.setText(loggedInUser.getEmail());
         Date dt = loggedInUser.getBirthDate();
@@ -68,8 +69,14 @@ public class DetailsPanel extends javax.swing.JPanel {
      */
     public DetailsPanel() {
         initComponents();
+        try {
+            Class.forName("main.Config");
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
         fillWindow();
         fillUserComponents();
+
     }
 
     private void fillWindow() {

@@ -15,4 +15,10 @@ public interface SkillDaoInter {
 
     public List<Skill> getAll();
     
+    public Skill getSkillById(int id);
+    
+    public boolean addSkill(Skill s);
+    
+    public boolean removeSkillById(int id);
+    
 }

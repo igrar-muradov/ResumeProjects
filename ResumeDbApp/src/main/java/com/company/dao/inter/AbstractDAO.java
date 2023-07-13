@@ -6,19 +6,26 @@ package com.company.dao.inter;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import lombok.SneakyThrows;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Igrar
  */
 public abstract class AbstractDAO {
-    @SneakyThrows
+
     public Connection connect() {
         String url = "jdbc:mysql://localhost:3306/resume";
         String user = "root";
         String password = "12345";
-        Connection con = DriverManager.getConnection(url, user, password);
+        Connection con = null;
+        try {
+            con = DriverManager.getConnection(url, user, password);
+        } catch (SQLException ex) {
+            Logger.getLogger(AbstractDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return con;
     }
 }

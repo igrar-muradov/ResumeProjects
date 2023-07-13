@@ -16,7 +16,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import lombok.SneakyThrows;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -24,7 +25,6 @@ import lombok.SneakyThrows;
  */
 public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 
-    @SneakyThrows
     private User getUser(ResultSet rs) throws Exception {
         int id = rs.getInt("id");
         String name = rs.getString("name");
@@ -44,7 +44,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
         return new User(id, name, surname, phone, email, profileDescription, address,birthdate, nationality, birthPlace);
     }
 
-    @SneakyThrows
+
     @Override
     public List<User> getAll() {
         List<User> result = new ArrayList<>();
@@ -68,6 +68,8 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 
         } catch (SQLException ex) {
             System.out.println(ex);
+        } catch (Exception ex) {
+            Logger.getLogger(UserDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return result;
     }

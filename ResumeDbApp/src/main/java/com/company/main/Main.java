@@ -4,11 +4,13 @@
  */
 package com.company.main;
 
-import com.company.dao.inter.CountryDaoInter;
-import com.company.dao.inter.EmploymentHistoryDaoInter;
-import com.company.dao.inter.SkillDaoInter;
-import com.company.dao.inter.UserDaoInter;
-import com.company.dao.inter.UserSkillDaoInter;
+import com.company.dao.inter.*;
+import com.company.entity.Country;
+import com.company.entity.User;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  *
@@ -23,9 +25,22 @@ public class Main {
         EmploymentHistoryDaoInter  emp = Context.instanceEmploymentHistoryDao();
         CountryDaoInter country = Context.instanceCountryDao();
         SkillDaoInter skill = Context.instanceSkillDao();
-        
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date birthdate = null;
+        try {
+            birthdate = sdf.parse("1999-01-04");
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+
+
+        User u = new User(1, "Igrar","Muradov", "+994777555564",
+                "igrar.muradov@gmail.com", "Java Enthuasist",
+                "Baku",new java.sql.Date(birthdate.getTime()), new Country(2,null,null),
+                new Country(1,null,null));
+
         System.out.println(userDao.getAll());
-        
     }
 
 }

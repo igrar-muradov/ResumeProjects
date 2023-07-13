@@ -4,12 +4,17 @@
  */
 package main;
 
+import com.company.dao.inter.UserDaoInter;
 import com.company.entity.User;
+import com.company.main.Context;
 
 /**
  *
  * @author Igrar
  */
 public class Config {
-    public static User loggedInUser;
+    
+    private static final UserDaoInter userDao = Context.instanceUserDao();
+    public static User loggedInUser= userDao.getById(6);
 }
+

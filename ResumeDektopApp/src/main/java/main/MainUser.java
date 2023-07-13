@@ -23,10 +23,10 @@ public class MainUser extends javax.swing.JFrame {
      * Creates new form Main
      */
     public MainUser() {
-        Config.loggedInUser = userDao.getById(6);
         initComponents();
         fillUserComponents();
         
+
     }
 
     public void fillUserComponents(){
@@ -44,8 +44,8 @@ public class MainUser extends javax.swing.JFrame {
 
         jSeparator1 = new javax.swing.JSeparator();
         tpUserInfo = new javax.swing.JTabbedPane();
-        panelDetails = new com.company.panel.DetailsPanel();
         panelProfile = new com.company.panel.ProfilePanel();
+        panelDetails = new com.company.panel.DetailsPanel();
         panelSkills = new com.company.panel.SkillsPanel();
         pnlUserInfo = new javax.swing.JPanel();
         lblSurname = new javax.swing.JLabel();
@@ -58,8 +58,8 @@ public class MainUser extends javax.swing.JFrame {
 
         tpUserInfo.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         tpUserInfo.setToolTipText("");
-        tpUserInfo.addTab("Details", panelDetails);
         tpUserInfo.addTab("Profile", panelProfile);
+        tpUserInfo.addTab("Details", panelDetails);
         tpUserInfo.addTab("Skills", panelSkills);
 
         lblSurname.setText("Surname");
@@ -130,10 +130,10 @@ public class MainUser extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(pnlUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 363, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(tpUserInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(tpUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -144,7 +144,7 @@ public class MainUser extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tpUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
+                .addComponent(tpUserInfo, javax.swing.GroupLayout.DEFAULT_SIZE, 534, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -173,6 +173,13 @@ public class MainUser extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        
+        try {
+            Class.forName("main.Config");
+        } catch (ClassNotFoundException ex) {
+            ex.printStackTrace();
+        }
+        
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -199,10 +206,13 @@ public class MainUser extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
-                new MainUser().setVisible(true);
+                new MainUser().setVisible(true);           
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
