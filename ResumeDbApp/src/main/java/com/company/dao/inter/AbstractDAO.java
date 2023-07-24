@@ -17,6 +17,11 @@ import java.util.logging.Logger;
 public abstract class AbstractDAO {
 
     public Connection connect() {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException ex) {
+            System.out.println(ex);
+        }
         String url = "jdbc:mysql://localhost:3306/resume";
         String user = "root";
         String password = "12345";
