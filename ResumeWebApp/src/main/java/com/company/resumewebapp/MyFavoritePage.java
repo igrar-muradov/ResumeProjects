@@ -25,8 +25,8 @@ import java.util.logging.Logger;
 @WebServlet(name = "MyFavoritePage", urlPatterns = {"/MyFavoritePage"})
 public class MyFavoritePage extends HttpServlet {
 
-    private UserDaoInter userDao = Context.instanceUserDao();
-    private SkillDaoInter skillDao = Context.instanceSkillDao();
+    private final UserDaoInter userDao = Context.instanceUserDao();
+    private final SkillDaoInter skillDao = Context.instanceSkillDao();
 
     @Override
     protected void doGet(
@@ -47,7 +47,7 @@ public class MyFavoritePage extends HttpServlet {
 
             out.println(skillDao.getAll() + "<br>");
             out.println("<br>");
-            
+
 
             out.println("</body>");
             out.println("</html>");

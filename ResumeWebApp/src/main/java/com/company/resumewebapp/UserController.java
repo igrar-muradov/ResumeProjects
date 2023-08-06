@@ -22,7 +22,7 @@ import java.io.IOException;
 @WebServlet(name = "UserController", urlPatterns = {"/UserController"})
 public class UserController extends HttpServlet {
 
-    private UserDaoInter userDao = Context.instanceUserDao();
+    private final UserDaoInter userDao = Context.instanceUserDao();
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

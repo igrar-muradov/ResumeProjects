@@ -8,12 +8,8 @@ import com.company.entity.Country;
 import com.company.entity.User;
 import com.company.dao.inter.AbstractDAO;
 import com.company.dao.inter.UserDaoInter;
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -46,19 +42,50 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
 
 
     @Override
-    public List<User> getAll() {
+    public List<User> getAll(String name, String surname, Integer nationalityId) {
         List<User> result = new ArrayList<>();
         try {
             Connection con = connect();
-            Statement stmt = con.createStatement();
-            stmt.execute("select "
+            String sql = "select "
                     + "    u.*, "
                     + "    c.nationality as nationality, "
                     + "    n.name as birthplace "
                     + "    from user u "
-                    + "left join country n ON u.nationality_id  = n.id "
-                    + "left join country c ON u.birthplace_id  = c.id ");
+                    + "    left join country n ON u.nationality_id  = n.id "
+                    + "    left join country c ON u.birthplace_id  = c.id "
+                    + "    where 1=1 ";
+            if(name!=null && !name.trim().isEmpty()){
+                sql += " and u.name=? ";
+            }
+            if(surname!=null && !surname.trim().isEmpty()){
+                sql += " and u.surname=? ";
+            }
+            if(nationalityId!=null){
+                sql += " and u.nationality_id=? ";
+            }
+
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            System.out.println("-----------------------------------------------------");
+            System.out.println("--------name = "+ name +" surname = "+surname+ " nationalityId = "+ nationalityId);
+
+            int i = 1;
+            if(name != null && !name.trim().isEmpty()){
+                stmt.setString(i,name);
+                i++;
+            }
+            if(surname != null && !surname.trim().isEmpty()){
+                stmt.setString(i,surname);
+                i++;
+            }
+            if(nationalityId != null){
+                stmt.setInt(i,nationalityId);
+
+            }
+            stmt.execute();
             ResultSet rs = stmt.getResultSet();
+
+            System.out.println("----------"+rs+"==============");
 
             while (rs.next()) {
                 User u = getUser(rs);

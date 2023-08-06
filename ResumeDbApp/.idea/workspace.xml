@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="13591936-35c3-4c0c-83f7-c64944c9fc62" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/CountryDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/EmploymentHistoryDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/SkillDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserSkillDaoImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/AbstractDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/CountryDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/EmploymentHistoryDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/SkillDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/UserDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/UserSkillDaoInter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/EmploymentHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/Skill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/UserSkill.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/main/Context.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/main/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/MyFavoritePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/MyFavoritePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/users.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2SLNnei9Zz6kBHI9Sw4QhFnOoj8" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/ResumeProjects/ResumeWebApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="ResumeDbApp" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="13591936-35c3-4c0c-83f7-c64944c9fc62" name="Changes" comment="" />
+      <created>1688922071006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1688922071006</updated>
+      <workItem from="1688922071982" duration="2115000" />
+      <workItem from="1691180263864" duration="2195000" />
+      <workItem from="1691236954726" duration="646000" />
+      <workItem from="1691237683908" duration="1570000" />
+      <workItem from="1691264826527" duration="603000" />
+      <workItem from="1691304792670" duration="4462000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
