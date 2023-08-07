@@ -15,12 +15,12 @@ public interface UserDaoInter {
 
     public List<User> getAll(String name, String surname, Integer nationalityId);
 
-    public User getById(int i);
+    public User getById(Integer i);
 
     public boolean addUser(User u);
 
     public boolean updateUser(User u);
 
-    public boolean removeUser(int id);
+    public boolean removeUser(Integer id);
     
 }

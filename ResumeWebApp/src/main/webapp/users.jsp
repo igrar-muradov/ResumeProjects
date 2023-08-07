@@ -36,53 +36,64 @@
 <div class="container">
     <div class="raw">
         <div class="col-4">
-        <form action="users.jsp" method="GET">
-            <div class="form-group">
-                <label>Name:</label>
-                <input placeholder="Enter name" class="form-control" name="name" value=""/>
-            </div>
-            <div class="form-group">
-                <label>Surname:</label>
-                <input placeholder="Enter surname" class="form-control" type="text" name="surname" value=""/>
-            </div>
-            <input class="btn btn-primary" type="submit" name="search" value="Search"/>
-        </form>
+            <form action="users" method="GET">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input placeholder="Enter name" class="form-control" name="name" value=""/>
+                </div>
+                <div class="form-group">
+                    <label>Surname:</label>
+                    <input placeholder="Enter surname" class="form-control" type="text" name="surname" value=""/>
+                </div>
+                <input class="btn btn-primary" type="submit" name="search" value="Search"/>
+            </form>
+        </div>
     </div>
-</div>
-<div>
-    <table class="table">
-        <thead>
-        <tr>
-            <th>name</th>
-            <th>surname</th>
-            <th>nationality</th>
-            <th></th>
-        </tr>
-        </thead>
-        <tbody>
-        <%
-            for (User u : list) {
-        %>
-        <tr>
-            <td><%=u.getName()%>
-            </td>
-            <td><%=u.getSurname()%>
-            </td>
-            <td><%=u.getNationality().getName() == null ? "N/A" : u.getNationality().getName()%>
-            </td>
-            <td>
-                <button class="btn btn-danger" type="submit" value="delete" name="action">
-                    <i class="btn_table fa fa-trash-o"></i>
-                </button>
-                <button class="btn btn-secondary" type="submit" value="update" name="action">
-                    <i class="fa fa-pencil"></i>
-                </button>
-            </td>
-        </tr>
-        <%}%>
-        </tbody>
-    </table>
-</div>
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>name</th>
+                <th>surname</th>
+                <th>nationality</th>
+                <th></th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <%
+                for (User u : list) {
+            %>
+            <tr>
+                <td><%=u.getName()%>
+                </td>
+                <td><%=u.getSurname()%>
+                </td>
+                <td><%=u.getNationality().getName() == null ? "N/A" : u.getNationality().getName()%>
+                </td>
+                <td style="width: 5px">
+                    <form action="userdetail" method="POST">
+                        <input type="hidden" name="id" value="<%=u.getId()%>"/>
+                        <input type="hidden" name="action" value="delete"/>
+                        <button class="btn btn-danger" type="submit" value="delete">
+                            <i class="btn_table fa fa-trash-o"></i>
+                        </button>
+                    </form>
+                </td>
+                <td>
+                    <form action="userdetail" method="GET">
+                        <input type="hidden" name="id" value="<%=u.getId()%>"/>
+                        <input type="hidden" name="action" value="update"/>
+                        <button class="btn btn-secondary" type="submit" value="update">
+                            <i class="fa fa-pencil"></i>
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            <%}%>
+            </tbody>
+        </table>
+    </div>
 </div>
 </body>
 </html>

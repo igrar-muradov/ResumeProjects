@@ -85,7 +85,6 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
             stmt.execute();
             ResultSet rs = stmt.getResultSet();
 
-            System.out.println("----------"+rs+"==============");
 
             while (rs.next()) {
                 User u = getUser(rs);
@@ -102,7 +101,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
     }
 
     @Override
-    public User getById(int userId) {
+    public User getById(Integer userId) {
         User result = null;
         try {
             Connection con = connect();
@@ -152,7 +151,7 @@ public class UserDaoImpl extends AbstractDAO implements UserDaoInter {
     }
 
     @Override
-    public boolean removeUser(int id) {
+    public boolean removeUser(Integer id) {
         Connection con = connect();
         try {
             Statement stmt = con.createStatement();
