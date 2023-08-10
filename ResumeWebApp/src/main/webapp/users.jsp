@@ -17,7 +17,10 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/users.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="assets/js/users.js" ></script>
     <title>JSP Page</title>
+
 </head>
 <body>
 <%
@@ -39,13 +42,14 @@
             <form action="users" method="GET">
                 <div class="form-group">
                     <label>Name:</label>
-                    <input placeholder="Enter name" class="form-control" name="name" value=""/>
+                    <input onkeyup="writeWhatIamTyping()"
+                            placeholder="Enter name" class="form-control" name="name" value=""/>
                 </div>
                 <div class="form-group">
                     <label>Surname:</label>
                     <input placeholder="Enter surname" class="form-control" type="text" name="surname" value=""/>
                 </div>
-                <input class="btn btn-primary" type="submit" name="search" value="Search"/>
+                <input class="btn btn-primary" type="submit" name="search" value="Search" id="btnsearch"/>
             </form>
         </div>
     </div>
@@ -65,20 +69,17 @@
                 for (User u : list) {
             %>
             <tr>
-                <td><%=u.getName()%>
-                </td>
-                <td><%=u.getSurname()%>
-                </td>
-                <td><%=u.getNationality().getName() == null ? "N/A" : u.getNationality().getName()%>
-                </td>
+                <td><%=u.getName()%></td>
+                <td><%=u.getSurname()%></td>
+                <td><%=u.getNationality().getName() == null ? "N/A" : u.getNationality().getName()%></td>
                 <td style="width: 5px">
-                    <form action="userdetail" method="POST">
                         <input type="hidden" name="id" value="<%=u.getId()%>"/>
                         <input type="hidden" name="action" value="delete"/>
-                        <button class="btn btn-danger" type="submit" value="delete">
+                        <button class="btn btn-danger" type="submit" value="delete"
+                                data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                onclick="setIdForDelete(<%=u.getId()%>)">
                             <i class="btn_table fa fa-trash-o"></i>
                         </button>
-                    </form>
                 </td>
                 <td>
                     <form action="userdetail" method="GET">
@@ -93,6 +94,31 @@
             <%}%>
             </tbody>
         </table>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Delete</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure?
+            </div>
+            <div class="modal-footer">
+                <form action="userdetail" method="POST">
+                    <input type="hidden" name="id" value="" id="idForDelete"/>
+                    <input type="hidden" name="action" value="delete"/>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" class="btn btn-danger" value="Delete"/>
+                </form>
+
+            </div>
+        </div>
     </div>
 </div>
 </body>
