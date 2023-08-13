@@ -24,6 +24,8 @@ public class User {
     private Country birthPlace;
     private List<UserSkill> skills;
 
+    private String password;
+
     public User(int id){
         this.id = id;
     }
@@ -32,7 +34,7 @@ public class User {
         
     }
     
-    public User(int id, String name, String surname, String phone, String email, String profileDescription, String address, Date birthDate, Country nationality, Country birthPlace) {
+    public User(int id, String name, String surname, String phone, String email, String profileDescription, String address, Date birthDate, Country nationality, Country birthPlace, String password) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -43,6 +45,7 @@ public class User {
         this.birthDate = birthDate;
         this.nationality = nationality;
         this.birthPlace = birthPlace;
+        this.password = password;
     }
 
     
@@ -135,9 +138,14 @@ public class User {
         this.address = address;
     }
 
-    
-    
-    
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "\n"+"User{ " +id + ", " + name + ", " + surname + ", " + phone + ", " + email + ", " + profileDescription + ", " + address+ ", " + birthDate + ", " + nationality + ", " + birthPlace + '}';

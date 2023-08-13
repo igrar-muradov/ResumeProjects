@@ -23,6 +23,11 @@
       <version>3.0.1</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>at.favre.lib</groupId>
+      <artifactId>bcrypt</artifactId>
+      <version>0.4.1</version>
+    </dependency>
   </dependencies>
   <build>
     <finalName>resumewebapp</finalName>

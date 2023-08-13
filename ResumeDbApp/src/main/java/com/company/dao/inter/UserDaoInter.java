@@ -15,6 +15,8 @@ public interface UserDaoInter {
 
     public List<User> getAll(String name, String surname, Integer nationalityId);
 
+    public User findByEmailAndPassword(String email, String password);
+
     public User getById(Integer i);
 
     public boolean addUser(User u);
@@ -22,5 +24,7 @@ public interface UserDaoInter {
     public boolean updateUser(User u);
 
     public boolean removeUser(Integer id);
+
+    public User findByEmail(String email);
     
 }

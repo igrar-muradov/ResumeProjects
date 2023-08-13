@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13591936-35c3-4c0c-83f7-c64944c9fc62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resume/MyFavoritePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resume/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/userdetail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/UserDaoInter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/dao/inter/UserDaoInter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/MyFavoritePage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resumewebapp/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/user.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resume/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/java/com/company/resume/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/assets/css/users.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/assets/css/users.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/userdetail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/userdetail.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/users.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ResumeWebApp/src/main/webapp/users.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +25,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/company/dao/impl/UserDaoImpl.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -44,15 +44,33 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/ResumeProjects/ResumeWebApp&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Workspace/ResumeProjects/ResumeDbApp&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.UserDaoImpl">
+    <configuration name="UserDaoImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.dao.impl.UserDaoImpl" />
+      <module name="ResumeDbApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.dao.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ResumeDbApp" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -76,6 +94,11 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.UserDaoImpl" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -92,6 +115,12 @@
       <workItem from="1691264826527" duration="603000" />
       <workItem from="1691304792670" duration="4462000" />
       <workItem from="1691338414130" duration="1242000" />
+      <workItem from="1691693567428" duration="600000" />
+      <workItem from="1691773497375" duration="5392000" />
+      <workItem from="1691826536364" duration="113000" />
+      <workItem from="1691869756805" duration="2372000" />
+      <workItem from="1691904971385" duration="1503000" />
+      <workItem from="1691908539235" duration="1833000" />
     </task>
     <servers />
   </component>
